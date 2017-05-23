@@ -93,7 +93,7 @@
 {{## def._errorMessages = {
   $ref:            "'can\\\'t resolve reference {{=it.util.escapeQuotes($schema)}}'",
   additionalItems: "'should NOT have more than {{=$schema.length}} items'",
-  additionalProperties: "'should NOT have additional properties'",
+  additionalProperties: "'should NOT have additional properties: {{=$additionalProperty}}'",
   anyOf:           "'should match some schema in anyOf'",
   dependencies:    "'should have {{? $deps.length == 1 }}property {{= it.util.escapeQuotes($deps[0]) }}{{??}}properties {{= it.util.escapeQuotes($deps.join(\", \")) }}{{?}} when property {{= it.util.escapeQuotes($property) }} is present'",
   'enum':          "'should be equal to one of the allowed values'",
